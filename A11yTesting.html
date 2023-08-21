@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <title>A11y Testing</title>
+    <meta charset='utf-8' />
+    <meta name="description" content="Test : testing" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css"> 
+</head>
+<body>
+		<div id="wrapper">
+			<div id="header"><h1>A11y Testing</h1></div>
+			<div id="content">
+				<h3>Semi Automated</h3>
+				<ol class="page-contents-list">
+					<li>Axe chrome extension</li>	
+					<li>AccessHint</li>	
+					<li>TPGI Arc</li>	
+					<li>WebAim Wave</li>	
+				</ol>
+
+			   <h3>Keyboard	</h3>
+			<ol class="page-contents-list">
+				<li> Keyboard navigation: Users must be able to navigate to all interactive interface components using a keyboard-WCAG 2.1.1 
+				</li>
+				<li>No keyboard traps: Users must be able to navigate away from all components using a keyboard-WCAG 2.1.2
+				</li>
+				<li>On focus: Navigating to a component must not trigger any unexpected change of context-WCAG 3.2.1
+				</li>
+				<li>On input: Changing a component's settings must not trigger any unexpected change of context-WCAG 3.2.2
+				</li>
+				<!--<li>No keystroke timings:Components must not require specific timings for individual keystrokes-WCAG 2.1.1
+				<li> Character key shortcuts:Users must be able to turn off or remap character key shortcuts-WCAG 2.1.4 
+				</li>-->
+				<li>
+					Visible focus: Components must provide a visible indication when they have the input focus-WCAG 2.4.7
+				</li>
+				<li> Revealing content: Activating a component that reveals hidden content must move input focus into the revealed content-WCAG 2.4.3
+				</li>
+				<li> Modal dialogs: Users must not be able to Tab away from a modal dialog without explicitly dismissing it-WCAG 2.4.3
+				</li>
+				<li>Closing content:Closing revealed content must return input focus to the component that revealed it-WCAG 2.4.3
+			</ol>
+
+			<h3>Digital Tublets(Bookmarklets)</h3>
+			<ol class="page-contents-list">
+				<li>Heading - Text that looks like a heading must be coded as a heading -WCAG 1.3.1, WCAG 2.4.6</li>
+				<li>Heading level: A heading's programmatic level must match the level that's presented visually-WCAG 1.3.1</li>
+				<li>Heading - Individual headings should accurately describe the section of content they head up</li>
+
+				<li> Focus order: Components must receive focus in an order that preserves meaning and operability-WCAG 2.4.3
+				</li>
+				<li>Image function: Every image must be coded as either meaningful or decorative-WCAG 1.1.1</li>
+				<li>
+					Text alternative: A meaningful image must have a text alternative that serves the equivalent purpose-WCAG 1.1.1
+				</li>
+				<li>	 
+					Images of text: Images of text are allowed only where a specific appearance is required (e.g., logotypes)-WCAG 1.4.5
+				</li>					 
+			</ol>
+
+			<h3>Repetitive content</h3>
+			<ol class="page-contents-list">
+				<li>Consistent navigation:Navigational mechanisms that appear on multiple pages must be presented in the same relative order-WCAG 3.2.3
+				</li>
+				<li>Functional components that appear on multiple pages must be identified consistently-WCAG 3.2.4</li>
+			</ol>
+			<h3>Links</h3>
+			<ol class="page-contents-list">
+				<li>Link function: If an anchor element functions as a custom widget, it must have the appropriate ARIA widget role - WCAG 4.1.2
+				</li>
+				<li>Link purpose: The purpose of a link must be described by its link text alone, or by the link text together with preceding page context - WCAG 2.4.4
+				</li>
+				<li>Label in name: A link's accessible name must contain its visible text label - WCAG 2.5.3 </li>
+				<li>Link color: Links should have a 3:1 contrast ratio with surrounding text and should provide additional visual cues on focus where color alone is used to identify them - <a href="https://www.w3.org/WAI/WCAG21/Techniques/general/G183.html">WCAG 1.4.1 </a> </li>
+			</ol>
+			<h3>Native widgets</h3>
+			<ol class="page-contents-list">
+				<li>Widget function: If a native widget functions as a custom widget, it must have the appropriate ARIA widget role - WCAG 4.1.2</li>
+				<li>Instructions: If a native widget has a visible label or instructions, they must be programmatically determinable-WCAG 1.3.1, WCAG 2.5.3</li>
+				<li>Expected input: A native widget must have a label and/or instructions that identify the expected input - WCAG 3.3.2</li>
+				<li>Cues: If a native widget adopts certain interactive states, it must provide appropriate cues - WCAG 1.3.1, WCAG 4.1.2</li>
+				<li>Autocomplete: Text fields that serve certain purposes must have the correct HTML5 autocomplete attribute-WCAG 1.3.5</li>
+			</ol>
+			<h3>Custom widgets</h3>
+			<ol class="page-contents-list">
+				<li>Design pattern: A custom widget must have the appropriate ARIA widget role for its design pattern-WCAG 4.1.2</li>
+				<li>Instructions: If a custom widget has a visible label or instructions, they must be programmatically determinable-WCAG 1.3.1, WCAG 2.5.3</li>
+				<li>Expected input: A custom widget must have a label and/or instructions that identify the expected input-WCAG 3.3.2</li>
+				<li>Role, state, property: A custom widget must support the ARIA roles, states, and properties specified by its design pattern-WCAG 4.1.2</li>
+				<li>Cues: If a custom widget adopts certain interactive states, it must communicate those states programmatically-WCAG 1.3.1, WCAG 4.1.2</li>
+				<li>Keyboard interaction: A custom widget must support the keyboard interaction specified by its design pattern-WCAG 2.1.1</li>
+			</ol>			
+			<h3>Timed events</h3>
+			<ol class="page-contents-list">
+				<li>Moving content: If content moves, blinks, or scrolls automatically for more than five seconds, users must be able to pause, stop, or hide it-WCAG 2.2.2</li>
+				<li>Auto-updating content: If content updates automatically, users must be able to pause, stop, hide, or control frequency of the updates-WCAG 2.2.2</li>
+				<li>Audio control: If audio content plays automatically for longer than three seconds, users must be able to pause or mute it-WCAG 1.4.2</li>
+				<li>Time limits: If a time limit is set by the content, the user must be able to turn off, adjust, or extend the time limit-WCAG 2.2.1</li>				
+			</ol>
+			<h3>Errors / status</h3>
+			<ol class="page-contents-list">
+				<li>Error identification: If an input error is automatically detected, the item in error must be identified, and the error described, in text-WCAG 3.3.1</li>
+				<li>Error suggestion: If an input error is automatically detected, guidance for correcting the error must be provided-WCAG 3.3.3</li>
+				<li>Error prevention: If submitting data might have serious consequences, users must be able to correct the data input before finalizing a submission-WCAG 3.3.4</li>
+				<li>Status messages: Status messages must be programmatically determinable without receiving focus - WCAG 4.1.3</li>
+			</ol>
+
+			<h3>Page navigation</h3>
+			<ol class="page-contents-list">
+				<li>Page title: A web page must have a title that describes its topic or purpose-WCAG 2.4.2</li>
+				<li>Frame title: A frame or iframe must have a title that describes its content</li>
+				<li>Multiple ways: Users must have multiple ways to navigate to a page</li>
+				<li>Language of page: A page must have the correct default language-WCAG  3.1.1</li>
+				<li>Language of parts: If the language of a passage differs from the default language of the page, the passage must have its own language attribute-WCAG  3.1.2</li>
+				<li>Text direction: If a page or a passage uses a script that is read right-to-left, it must have the correct text direction-WCAG 1.3.2</li>
+			</ol>
+			<h3>Sensory</h3>
+			<ol class="page-contents-list">
+				<li>Color as meaning: Color must not be used as the only visual means for conveying meaning -WCAG 1.4.1</li>
+				<li>Instructions: Instructions must not rely solely on color or other sensory characteristics - WCAG 1.3.3 </li>
+				<li>Auditory cues: Auditory cues must be accompanied by visual cues-WCAG 1.1.1</li>
+				<li>Flashing: Web pages must not have content that flashes more than three times per second-WCAG 2.3.1</li>
+			</ol>
+  <h3>Adaptable content</h3><ol class="page-contents-list"><li>High contrast mode: : Websites and web apps must honor high contrast appearance settings and functions - SECTION 508 - 502.2.2 </li><li>Resize text: : Users must be able to resize text, without using assistive technology, up to 200% with no loss of content or functionality - WCAG 1.4.4 </li><li>Contrast: : Text elements must have sufficient contrast - WCAG 1.4.3 </li><li>Orientation: : Web content must not be locked to a particular screen orientation - WCAG 1.3.4 </li><li>Reflow: : Content must be visible without having to scroll in two dimensions - WCAG 1.4.10 </li><li>Text spacing: : Users must be able to adjust text spacing with no loss of content or functionality - WCAG 1.4.12 </li><li>Hover / focus content: : Content that appears on focus or hover must be dismissible, hoverable, and persistent - WCAG 1.4.13 </li></ol>
+  <h3>Audio / video</h3><ol class="page-contents-list"><li>Audio-only equivalent: : Pre-recorded audio-only content must be accompanied by an equivalent text alternative - WCAG 1.2.1 </li><li>Video-only equivalent: : Pre-recorded video-only content must be accompanied by an equivalent text or audio alternative - WCAG 1.2.1 </li></ol>
+  <h3>Multimedia</h3><ol class="page-contents-list"><li>Captions: : Pre-recorded multimedia content must have captions - WCAG 1.2.2 </li><li>No obstruction: : Captions must not obscure or obstruct relevant information in the video - WCAG 1.2.2 </li><li>Audio description: : Pre-recorded video with audio must have an audio description - WCAG 1.2.3, WCAG 1.2.5 </li><li>Synchronization: : An audio description must be synchronized with the video content - WCAG 1.2.5 </li><li>No conflict: : An audio description must not conflict with audible information in the sound track - WCAG 1.2.5 </li></ol>
+  <h3>Live multimedia</h3><ol class="page-contents-list"><li>Captions: : Captions must be provided for live (streaming) video with audio - WCAG 1.2.4 </li></ol>
+  <h3>Sequence</h3><ol class="page-contents-list"><li>CSS positioning: : Meaningful content positioned on the page using CSS must retain its meaning when CSS is disabled - WCAG 1.3.2 </li><li>Layout tables: : The content in an HTML layout table must make sense when the table is linearized - WCAG 1.3.2 </li><li>Columns: : Content presented in multi-column format must support a correct reading sequence - WCAG 1.3.1, WCAG 1.3.2 </li></ol>
+  <h3>Semantics</h3><ol class="page-contents-list"><li>CSS content: : Meaningful content must not be implemented using only CSS :before or :after - WCAG 1.3.1 </li><li>Table semantics: : A &lt;table&gt; element must be coded correctly as a data table or a layout table - WCAG 1.3.1 </li><li>Table headers: : Coded headers must be used correctly - WCAG 1.3.1 </li><li>Headers attribute: : The headers attribute of a &lt;td&gt; element must reference the correct &lt;th&gt; element(s) - WCAG 1.3.1 </li><li>Lists: : Lists must be contained within semantically correct containers - WCAG 1.3.1 </li><li>Emphasis: : Words and phrases that are visually emphasized must be contained within semantically correct containers - WCAG 1.3.1 </li><li>Quotes: : The &lt;blockquote&gt; element must not be used to style non-quote text - WCAG 1.3.1 </li><li>Letter spacing: : Spacing characters must not be used to increase the space between letters in a word - WCAG 1.3.1 </li></ol>
+  <h3>Pointer / motion</h3><ol class="page-contents-list"><li>Pointer gestures: : Functions must be operable without requiring multipoint or path-based gestures - WCAG 2.5.1 </li><li>Pointer cancellation: : Users must be able to cancel functions that can be operated using a single pointer - WCAG 2.5.2 </li><li>Motion operation: : If a function can be operated through motion, it must also be operable through user interface components - WCAG 2.5.4 </li></ol>
+  <h3>Contrast</h3><ol class="page-contents-list"><li>UI components: : Visual information used to identify active user interface components and their states must have sufficient contrast - WCAG 1.4.11 </li><li>State changes: : Any visual information that indicates a component's state must have sufficient contrast - WCAG 1.4.11 </li><li>Graphics: : Graphics must have sufficient contrast - WCAG 1.4.11 </li></ol>
+
+
+			<!-- 
+			<li>	  
+				CAPTCHAs: If a CAPTCHA is used, alternative methods must be provided for both users without vision and users without hearing-WCAG 1.1.1
+			</li>
+			-->
+
+
+			</div> <!--content-->
+		</div> <!--wrapper-->
+
+	<script>
+
+	</script>
+	
+</body>
+</html>

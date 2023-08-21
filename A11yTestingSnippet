@@ -1,0 +1,41 @@
+const encodeHTML = (str) =>{
+ return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+}
+const headers = document.querySelectorAll('.assessment-header');
+headers.forEach(header=>{
+	let h3ElementTxt = '';
+	header.childNodes.forEach(node => {
+	  if (node.nodeType === Node.TEXT_NODE) {
+	    h3ElementTxt += node.textContent.trim();
+	  }
+	});
+	// console.log(h3ElementTxt)
+	let OP = `<h3>${h3ElementTxt}</h3><ol class="page-contents-list">`;
+	// const lbl = `Showing slide ${i+1} of ${pages.length}`;
+	
+	const stepDetails = header.parentNode.querySelectorAll('.step-details');
+	stepDetails.forEach(stepDetail=>{
+		const h4Element = stepDetail.querySelector('.step-header-name');
+		let h4ElementTxt='';
+		h4Element.childNodes.forEach(node => {
+		  if (node.nodeType === Node.TEXT_NODE) {
+		    h4ElementTxt += node.textContent.trim();
+		  }
+		});
+		// console.log(h4ElementTxt)
+		const desc= stepDetail.querySelector('.step-header-description').textContent.trim();
+		// console.log(desc)
+		const links= stepDetail.querySelectorAll('a');
+		let refTxt='- ';
+		links.forEach((link,index) =>{
+			refTxt += link.innerHTML 
+		  if (index < links.length - 1) {
+		    refTxt += ", ";
+		  }			
+		})
+		// console.log(refTxt)
+		OP+=`<li>${h4ElementTxt} : ${encodeHTML(desc)} ${refTxt} </li>`
+	})
+	OP+=`</ol>`;
+	console.log(OP)
+})
