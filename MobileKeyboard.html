@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	  <title>Android Keyboard Testing</title>
+    <meta charset='utf-8' />
+    <meta name="description" content="Test : testing" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css"> 
+</head>
+<body>
+		<div id="wrapper">
+			<div id="header"><a href="https://www.bbc.com">BBC</a></div>
+			<div id="content">
+
+<div class="Box-sc-g0xbh4-0 cTsUqU js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto">Keyboard accessibility testing on mobile devices</h1><a id="user-content-keyboard-accessibility-testing-on-mobile-devices" class="anchor" aria-label="Permalink: Keyboard accessibility testing on mobile devices" href="#keyboard-accessibility-testing-on-mobile-devices"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto">Setup</h1><a id="user-content-setup" class="anchor" aria-label="Permalink: Setup" href="#setup"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Which keyboard should you get?</h2><a id="user-content-which-keyboard-should-you-get" class="anchor" aria-label="Permalink: Which keyboard should you get?" href="#which-keyboard-should-you-get"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Any bluetooth keyboard should work. If you are testing both iOS and Android, it is worth having a dedicated keyboard for each. If you are working alone and would like to save money, you can use one keyboard for two devices. It is more convenient if you get a multi-device keyboard because they allow switching between multiple paired devices instead of having to constantly unpair and pair. Another way to use one keyboard with multiple devices is with Apple’s Magic Keyboard which can be connected using bluetooth to an iPhone and using USB-C to a Google Pixel.</p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Setting up a bluetooth keyboard on iOS</h2><a id="user-content-setting-up-a-bluetooth-keyboard-on-ios" class="anchor" aria-label="Permalink: Setting up a bluetooth keyboard on iOS" href="#setting-up-a-bluetooth-keyboard-on-ios"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ol dir="auto">
+<li>Pair your keyboard with your iPhone by going to <code>Settings &gt; Bluetooth</code> and setting Bluetooth <code>On</code>.</li>
+<li>Choose your bluetooth keyboard.</li>
+<li>Before using your keyboard, enable FKA (Full Keyboard Access) by going to <code>Accessibility &gt; Keyboards &gt; Full Keyboard Access</code>.</li>
+</ol>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto">Setting up a bluetooth keyboard on Android</h3><a id="user-content-setting-up-a-bluetooth-keyboard-on-android" class="anchor" aria-label="Permalink: Setting up a bluetooth keyboard on Android" href="#setting-up-a-bluetooth-keyboard-on-android"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ol dir="auto">
+<li>Pair your keyboard with your Android device by going to <code>Settings &gt; Connected Devices &gt; Pair new device</code>.</li>
+<li>Upon connection, you get a prompt confirming the keyboard type.</li>
+</ol>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Discovering the keystrokes</h2><a id="user-content-discovering-the-keystrokes" class="anchor" aria-label="Permalink: Discovering the keystrokes" href="#discovering-the-keystrokes"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto">Android’s keyboard shortcuts</h3><a id="user-content-androids-keyboard-shortcuts" class="anchor" aria-label="Permalink: Android’s keyboard shortcuts" href="#androids-keyboard-shortcuts"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">After connecting the keyboard, go to <code>Settings &gt; System &gt; Languages &amp; Input &gt; Physical Keyboard &gt; Keyboard Shortcuts</code>.</p>
+<div class="markdown-alert markdown-alert-note" dir="auto"><p class="markdown-alert-title" dir="auto"><svg class="octicon octicon-info mr-2" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>Note</p><p dir="auto">These steps were reproduced on a Pixel 5a running Android 13.</p>
+</div>
+<p dir="auto">This will display a list of keyboard shortcuts.</p>
+<p dir="auto"><img src="image1.png" alt="Android keyboard shortcuts" width="250" style="max-width: 100%;"></p>
+<p dir="auto">The shortcut list uses a search icon which may be present on some keyboards. On the Logitech K480 and K780 models, the search icon corresponds to the start key. On Apple’s Magic Keyboard, this corresponds to the command key. You may need to experiment and confirm to determine what this is on your keyboard.</p>
+<p dir="auto">The list of shortcuts shown does not show how to perform some critical actions like navigating between the top bar and the main content but this is provided in the full keystroke table below (action: Switch between panes). Also, Android keystrokes cannot be re-mapped.</p>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto">iOS Full Keyboard Access Commands</h3><a id="user-content-ios-full-keyboard-access-commands" class="anchor" aria-label="Permalink: iOS Full Keyboard Access Commands" href="#ios-full-keyboard-access-commands"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto">Go to <code>Settings &gt; Accessibility &gt; Keyboards &gt; Full Keyboard Access &gt; Commands</code>.</p>
+<p dir="auto">This gives a full list of the commands and allows re-mapping and recording keyboard shortcuts.</p>
+<p dir="auto"><img src="image2.png" alt="Apple keyboard shortcuts mapping" width="250" style="max-width: 100%;"></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Keystrokes for testing on Android</h2><a id="user-content-keystrokes-for-testing-on-android" class="anchor" aria-label="Permalink: Keystrokes for testing on Android" href="#keystrokes-for-testing-on-android"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Magic keyboard</th>
+<th>Logitech K480</th>
+<th>Logitech K780</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Navigate to the next interactive element</td>
+<td><code>tab</code></td>
+<td><code>tab</code></td>
+<td><code>tab</code></td>
+</tr>
+<tr>
+<td>Navigate to the previous interactive element</td>
+<td><code>shift + tab</code></td>
+<td><code>shift + tab</code></td>
+<td><code>shift + tab</code></td>
+</tr>
+<tr>
+<td>Scroll/Go to next item in group <br> Select items in a collection, list, or menu</td>
+<td><code>arrow keys</code></td>
+<td><code>arrow keys</code></td>
+<td><code>arrow keys</code></td>
+</tr>
+<tr>
+<td>Activate an interactive element</td>
+<td><code>enter</code> or <code>space bar</code></td>
+<td><code>enter</code> or <code>space bar</code></td>
+<td><code>enter</code> or <code>space bar</code></td>
+</tr>
+<tr>
+<td>Go Back. This can be used to dismiss menus and popups.</td>
+<td><code>command + backspace</code></td>
+<td><code>search-icon key + back</code></td>
+<td><code>start + left arrow</code> or <code>back/F6</code></td>
+</tr>
+<tr>
+<td>Exit</td>
+<td><code>esc</code></td>
+<td><code>esc</code></td>
+<td><code>back/F6</code> or <code>home/F4</code></td>
+</tr>
+<tr>
+<td>Switch between apps</td>
+<td><code>option + tab</code></td>
+<td>Android 13 or lower: <code>alt + tab</code> <br>Android 14 and up: <code>alt + tab</code> or <code>start + tab</code></td>
+<td>Android 13 or lower: <code>alt + tab</code> <br>Android 14 and up: <code>alt + tab</code> or <code>start + tab</code></td>
+</tr>
+<tr>
+<td>Switch between panes such as top navigation pane and main content</td>
+<td>Android 13 or lower: <code>command + tab</code><br>Android 14 and up: <code>control + tab</code></td>
+<td>Android 13 or lower: <code>start + tab</code> <br>Android 14 and up: <code>control + tab</code></td>
+<td>Android 13 or lower: <code>start + tab</code> <br>Android 14 and up: <code>control + tab</code></td>
+</tr>
+<tr>
+<td>Open keyboard shortcuts list. <br> - The shortcuts for Home, Back and Notifications use the search-icon key which is just the command key.</td>
+<td><code>command + /</code></td>
+<td><code>start + /</code></td>
+<td><code>start + /</code> <br>(Does not work with numpad  <code>/</code> key)</td>
+</tr>
+</tbody>
+</table>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Keystrokes for testing on iOS</h2><a id="user-content-keystrokes-for-testing-on-ios" class="anchor" aria-label="Permalink: Keystrokes for testing on iOS" href="#keystrokes-for-testing-on-ios"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Magic keyboard</th>
+<th>Logitech K480</th>
+<th>Logitech K780</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Navigate to the next interactive element</td>
+<td><code>tab</code></td>
+<td><code>tab</code></td>
+<td><code>tab</code></td>
+</tr>
+<tr>
+<td>Navigate to the previous interactive element</td>
+<td><code>shift + tab</code></td>
+<td><code>shift + tab</code></td>
+<td><code>shift + tab</code></td>
+</tr>
+<tr>
+<td>Scroll/Go to next item in group <br> Select items in a collection, list, or menu</td>
+<td><code>arrow keys</code></td>
+<td><code>arrow keys</code></td>
+<td><code>arrow keys</code></td>
+</tr>
+<tr>
+<td>Activate an interactive element</td>
+<td><code>space bar</code></td>
+<td><code>space bar</code></td>
+<td><code>space bar</code></td>
+</tr>
+<tr>
+<td>Show Help</td>
+<td><code>tab + h</code></td>
+<td><code>tab + h</code></td>
+<td><code>tab + h</code></td>
+</tr>
+<tr>
+<td>Go Back. This can be used to dismiss menus and popups.</td>
+<td><code>tab +  b</code></td>
+<td><code>tab +  b</code></td>
+<td><code>tab +  b</code></td>
+</tr>
+<tr>
+<td>Exit</td>
+<td><code>esc</code></td>
+<td><code>esc</code></td>
+<td><code>back/F6</code> or <code>home/F4</code></td>
+</tr>
+<tr>
+<td>Show Custom Accessibility Actions</td>
+<td><code>tab + z</code></td>
+<td><code>tab + z</code></td>
+<td><code>tab + z</code></td>
+</tr>
+<tr>
+<td>Switch between apps</td>
+<td><code>function + up arrow</code></td>
+<td>Double-press <code>back/F4</code></td>
+<td>Double-press <code>back/F6</code></td>
+</tr>
+</tbody>
+</table>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto">Testing</h1><a id="user-content-testing" class="anchor" aria-label="Permalink: Testing" href="#testing"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Overview of keyboard testing procedure</h2><a id="user-content-overview-of-keyboard-testing-procedure" class="anchor" aria-label="Permalink: Overview of keyboard testing procedure" href="#overview-of-keyboard-testing-procedure"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<table>
+<thead>
+<tr>
+<th>Test Steps</th>
+<th>WCAG SC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ensure all actions can be performed by keyboard.</td>
+<td><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard" rel="nofollow">2.1.1 Keyboard</a></td>
+</tr>
+<tr>
+<td>Ensure there are no keyboard traps</td>
+<td><a href="https://www.w3.org/WAI/WCAG21/Understanding/no-keyboard-trap" rel="nofollow">2.1.2 No Keyboard Trap</a></td>
+</tr>
+<tr>
+<td>Ensure the focus order is logical.</td>
+<td><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-order" rel="nofollow">2.4.3 Focus Order</a></td>
+</tr>
+<tr>
+<td>Ensure keyboard focus is visible</td>
+<td><a href="https://www.w3.org/WAI/WCAG21/Understanding/focus-visible" rel="nofollow">2.4.7 Focus Visible</a></td>
+</tr>
+<tr>
+<td>When any user interface component receives focus, ensure it does not initiate a change of context.</td>
+<td><a href="https://www.w3.org/WAI/WCAG21/Understanding/on-focus" rel="nofollow">3.2.1 On Focus</a></td>
+</tr>
+<tr>
+<td>Ensure character key shortcuts without modifiers can be remapped or turned off</td>
+<td><a href="https://www.w3.org/WAI/WCAG21/Understanding/character-key-shortcuts" rel="nofollow">2.1.4 Character Key Shortcuts</a></td>
+</tr>
+<tr>
+<td>Ensure content which appears on focus, is persistent and dismissable.</td>
+<td><a href="https://www.w3.org/WAI/WCAG21/Understanding/content-on-hover-or-focus" rel="nofollow">1.4.13 Content on Hover or Focus</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Full keyboard testing procedure</h2><a id="user-content-full-keyboard-testing-procedure" class="anchor" aria-label="Permalink: Full keyboard testing procedure" href="#full-keyboard-testing-procedure"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ol start="1" type="1" dir="auto">
+	<li>Ensure all actions can be performed by keyboard.
+		<ol start="1" type="a" dir="auto">
+			<li><strong>iOS:</strong>
+				<ol start="1" type="i" dir="auto">
+					<li>If an action is not available, check if there are custom actions. Also try <code>tab + g</code> to perform keyboard gestures. Depending on interpretation, keyboard gestures may not be a viable alternative for meeting 2.1.1.</li>
+				</ol>
+			</li>
+			<li><strong>Android:</strong>
+				<ol start="1" type="i" dir="auto">
+					<li>If an action is not available. Open the  keyboard shortcuts list to check for any alternative methods to perform an action.</li>
+					<li>If you cannot access the top navigation pane or other segment of the screen, check if you can reach the area by using the “switch between panes” keystroke.</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+	<li>Ensure there are no keyboard traps.
+		<ol start="1" type="i" dir="auto">
+			<li>If an element receives keyboard focus, it should be possible to move focus away using standard inputs or there are instructions to guide users.</li>
+		</ol>
+	</li>
+	<li>Ensure the focus order is logical.
+		<ol start="1" type="a" dir="auto">
+			<li>When navigation sequences affect meaning and operability, focusable elements need to receive focus in an order that preserves meaning and operability.</li>
+			<li>The focus order should generally follow the reading order: top to bottom and start to end. However, the focus order can also differ as long as the order makes sense for the activity. </li>
+			<li>When a popup appears focus should be set on the new content and when dismissed, focus should be returned to the triggering element.</li>
+		</ol>
+	 </li>
+	<li>Ensure keyboard focus is visible.
+		<ol start="1" type="a" dir="auto">
+			<li>Users should always be able to tell which element has keyboard focus.</li>
+			<li><strong>iOS:</strong>
+			<ol start="1" type="i" dir="auto">
+				<li>The default FKA indicator is enough and it can be customized in the Full Keyboard Access settings. </li>
+			</ol>
+			</li>
+			<li><strong>Android:</strong>
+				<ol start="1" type="i" dir="auto">
+					<li>The default focus indicator tends to be very faint. In cases where the developer has not modified the default Android styles (including background color and button color), then the default indicator is sufficient. But in the much more unlikely case of custom focus styles, the developer must ensure the focus indicator is sufficient and should adjust the default to ensure the contrast ratio is at least 3:1.</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+	<li>When any user interface component receives focus, ensure it does not initiate a change of context. <strong>Note:</strong> this is unlikely to occur on native mobile apps.
+		<ol start="1" type="a" dir="auto">
+			<li>Ensure elements receiving focus do not cause any of the following:
+				<ol start="1" type="i" dir="auto">
+					<li>Forms submitted automatically;</li>
+					<li>New windows are launched;</li>
+					<li>Focus jumps to another component;</li>
+					<li>A different app or user agent is activated;</li>
+					<li>Content is changed that affects the meaning of the screen/page;</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+	<li>Ensure character key shortcuts without modifiers can be remapped or turned off.
+		<ol start="1" type="a" dir="auto">
+			<li>Try inputting all of the alphabet, punctuation, number and symbol characters. If any of these keys are used alone then make sure one of the following is true:
+				<ol start="1" type="i" dir="auto">
+					<li>There is a mechanism available to turn the shortcut off;</li>
+					<li>A mechanism is available to remap the shortcut to include one or more non-printable keyboard keys (e.g., <code>ctrl, alt/option</code>)</li>
+					<li>The keyboard shortcut for a user interface element is only active when that element has focus.</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+	<li>Ensure content which appears in focus, is persistent and dismissable. <strong>Note:</strong> this is unlikely to occur on native mobile apps.
+		<ol start="1" type="a" dir="auto">
+			<li>Where receiving keyboard focus triggers additional content to become visible and then hidden, the following are true:
+				<ol start="1" type="i" dir="auto">
+					<li>Dismissible: A mechanism is available to dismiss the additional content without moving keyboard focus, unless the additional content communicates an input error or does not obscure or replace other content;</li>
+					<li>Persistent: The additional content remains visible until the focus trigger is removed, the user dismisses it, or its information is no longer valid.</li>
+					<li>(Hoverable is not applicable to mobile because it is only for mouse hover.)</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+</ol>
+<div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto">References</h1><a id="user-content-references" class="anchor" aria-label="Permalink: References" href="#references"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Apple iPhone</h2><a id="user-content-apple-iphone" class="anchor" aria-label="Permalink: Apple iPhone" href="#apple-iphone"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="https://support.apple.com/guide/iphone/adjust-keyboard-settings-ipha7c3927eb/ios" rel="nofollow">	Adjust the onscreen and external keyboard settings on iPhone - Apple Support</a></li>
+<li><a href="https://support.apple.com/guide/iphone/use-shortcuts-iph3da414515/17.0/ios/17.0" rel="nofollow">Use shortcuts on Magic Keyboard with iPhone</a></li>
+<li><a href="https://support.apple.com/guide/iphone/pair-magic-keyboard-iph4288319c0/17.0/ios/17.0" rel="nofollow">Pair Magic Keyboard with iPhone</a></li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto">Google Android</h2><a id="user-content-google-android" class="anchor" aria-label="Permalink: Google Android" href="#google-android"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="https://support.google.com/accessibility/android/answer/6110948?hl=en#zippy=%2Cdefault-keymap" rel="nofollow">Use TalkBack keyboard shortcuts</a></li>
+<li><a href="https://support.google.com/accessibility/android/answer/7650693?hl=en" rel="nofollow">Use accessibility shortcuts</a></li>
+</ul>
+</article></div>
+
+
+<p><a href="https://github.com/workday-accessibility/accessibility-eval/blob/main/keyboard.md">https://github.com/workday-accessibility/accessibility-eval/blob/main/keyboard.md</a></p>
+
+			</div> <!--content-->
+		</div> <!--wrapper-->
+
+	<script>
+
+	</script>
+	
+</body>
+</html>
