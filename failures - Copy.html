@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCAG 2.2 Failures Summary with Checkpoints</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="lib/highlight/monokai.css"> -->
+</head>
+<body>
+    <h1>WCAG 2.2 Failures Summary with Checkpoints</h1>
+    <p>A summary of selected WCAG 2.2 failure techniques from <a href="https://www.w3.org/WAI/WCAG22/Techniques/#failures">W3C</a> as of March 05, 2025, including the Success Criterion (checkpoint) each fails.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Failure ID</th>
+                <th>Component</th>
+                <th>Description</th>
+                <th>Example</th>
+                <th>Checkpoint</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>F1</td>
+                <td>General Content</td>
+                <td>Page content changes without user notification, disorienting assistive tech users.</td>
+                <td><code class="hljs javascript"><div></code> updates via JS with no ARIA live region: <code class="hljs javascript"><div>Price: $10</div></code> changes to <code class="hljs javascript">$15</code>.</td>
+                <td>4.1.2 (Name, Role, Value)</td>
+            </tr>
+            <tr>
+                <td>F2</td>
+                <td>Images</td>
+                <td>Decorative images with non-empty alt text, causing screen readers to announce irrelevant info.</td>
+                <td><code class="hljs javascript"><img src="spacer.gif" alt="spacer"></code> instead of <code class="hljs javascript"><img src="spacer.gif" alt=""></code>.</td>
+                <td>1.1.1 (Non-text Content)</td>
+            </tr>
+            <tr>
+                <td>F3</td>
+                <td>CSS</td>
+                <td>Using CSS to include meaningful images without text alternatives.</td>
+                <td><code class="hljs javascript">background-image: url('logo.png')</code> with no <code class="hljs javascript"><img></code> or text equivalent.</td>
+                <td>1.1.1 (Non-text Content)</td>
+            </tr>
+            <tr>
+                <td>F4</td>
+                <td>Text</td>
+                <td>Text spacing too tight (e.g., no space after punctuation), confusing screen readers.</td>
+                <td><code class="hljs javascript"><p>Hello,world</p></code> instead of <code class="hljs javascript"><p>Hello, world</p></code>.</td>
+                <td>1.3.1 (Info and Relationships)</td>
+            </tr>
+            <tr>
+                <td>F7</td>
+                <td>Dialogs</td>
+                <td>Modal dialogs trap keyboard focus with no escape, blocking navigation.</td>
+                <td><code class="hljs javascript"><div role="dialog"></code> with no <code class="hljs javascript">tabindex</code> or close button accessible by keyboard.</td>
+                <td>2.1.2 (No Keyboard Trap)</td>
+            </tr>
+            <tr>
+                <td>F8</td>
+                <td>Time Limits</td>
+                <td>Time limits without pause/extend options, excluding users needing more time.</td>
+                <td>A 30-second quiz timer with no <code class="hljs javascript"><button>Pause</button></code> or extension option.</td>
+                <td>2.2.1 (Timing Adjustable)</td>
+            </tr>
+            <tr>
+                <td>F10</td>
+                <td>Multiple Formats</td>
+                <td>Combining formats (e.g., Flash) traps users without keyboard escape.</td>
+                <td>Flash popup with no <code class="hljs javascript"><button>Close</button></code> accessible via keyboard.</td>
+                <td>2.1.2 (No Keyboard Trap)</td>
+            </tr>
+            <tr>
+                <td>F13</td>
+                <td>Images</td>
+                <td>Alt text omits color-based info critical to meaning.</td>
+                <td><code class="hljs javascript"><img src="chart.png" alt="Chart"></code> (omits "red line shows sales decline").</td>
+                <td>1.1.1 (Non-text Content)</td>
+            </tr>
+            <tr>
+                <td>F14</td>
+                <td>General Content</td>
+                <td>Content identified only by shape/location, not text.</td>
+                <td>"Click the round button" with no <code class="hljs javascript"><button>Submit</button></code> label.</td>
+                <td>1.3.3 (Sensory Characteristics)</td>
+            </tr>
+            <tr>
+                <td>F15</td>
+                <td>Custom Controls</td>
+                <td>Custom controls lack accessibility API support.</td>
+                <td><code class="hljs javascript"><div onclick="submit()">Go</div></code> instead of <code class="hljs javascript"><button>Go</button></code>.</td>
+                <td>4.1.2 (Name, Role, Value)</td>
+            </tr>
+            <tr>
+                <td>F16</td>
+                <td>Scrolling Content</td>
+                <td>Scrolling content lacks pause mechanism.</td>
+                <td><code class="hljs javascript"><marquee>News</marquee></code> with no pause control.</td>
+                <td>2.2.2 (Pause, Stop, Hide)</td>
+            </tr>
+            <tr>
+                <td>F17</td>
+                <td>Form Fields</td>
+                <td>Input fields with no labels, only placeholders, inaccessible to screen readers.</td>
+                <td><code class="hljs javascript"><input placeholder="Name"></code> with no <code class="hljs javascript"><label>Name</label></code>.</td>
+                <td>1.3.1 (Info and Relationships)</td>
+            </tr>
+            <tr>
+                <td>F20</td>
+                <td>Images</td>
+                <td>Text in images without equivalent in HTML, inaccessible to screen readers.</td>
+                <td><code class="hljs javascript"><img src="menu.png" alt="Menu"></code> where "menu.png" contains text "Home, About, Contact".</td>
+                <td>1.1.1 (Non-text Content)</td>
+            </tr>
+            <tr>
+                <td>F22</td>
+                <td>General Content</td>
+                <td>Interruptions (e.g., popups) without user control, disrupting focus.</td>
+                <td>Auto-popup <code class="hljs javascript"><div></code> with no close option after 5 seconds.</td>
+                <td>2.2.4 (Interruptions)</td>
+            </tr>
+            <tr>
+                <td>F25</td>
+                <td>Page Titles</td>
+                <td>Title not descriptive of page content or purpose.</td>
+                <td><code class="hljs javascript"><title>Page</title></code> instead of <code class="hljs javascript"><title>Shop - Product List</title></code>.</td>
+                <td>2.4.2 (Page Titled)</td>
+            </tr>
+            <tr>
+                <td>F26</td>
+                <td>Form Fields</td>
+                <td>Placeholder as sole label, disappearing on focus, confusing users.</td>
+                <td><code class="hljs javascript"><input placeholder="Email"></code> with no persistent <code class="hljs javascript"><label></code>.</td>
+                <td>3.3.2 (Labels or Instructions)</td>
+            </tr>
+            <tr>
+                <td>F30</td>
+                <td>Images</td>
+                <td>Text alternatives that don’t serve the same purpose as the image.</td>
+                <td><code class="hljs javascript"><img src="cat.jpg" alt="Image"></code> instead of <code class="hljs javascript">alt="Fluffy cat sleeping"</code>.</td>
+                <td>1.1.1 (Non-text Content)</td>
+            </tr>
+            <tr>
+                <td>F32</td>
+                <td>Text Contrast</td>
+                <td>Insufficient contrast between text and background.</td>
+                <td><code class="hljs javascript"><p style="color: #666; background: #999">Text</p></code> (low contrast ratio).</td>
+                <td>1.4.3 (Contrast Minimum)</td>
+            </tr>
+            <tr>
+                <td>F37</td>
+                <td>General Navigation</td>
+                <td>Navigation changes unexpectedly without warning.</td>
+                <td>Clicking <code class="hljs javascript"><a href="#"></code> reloads page instead of expanding a menu, with no alert.</td>
+                <td>3.2.2 (On Input)</td>
+            </tr>
+            <tr>
+                <td>F42</td>
+                <td>Keyboard Events</td>
+                <td>Mouse-only event handlers (e.g., onmouseover) with no keyboard equivalent.</td>
+                <td><code class="hljs javascript"><div onmouseover="show()">Hover</div></code> with no <code class="hljs javascript">onfocus</code> or keyboard trigger.</td>
+                <td>2.1.1 (Keyboard)</td>
+            </tr>
+            <tr>
+                <td>F52</td>
+                <td>General Content</td>
+                <td>New window opens without warning, disorienting users.</td>
+                <td><code class="hljs javascript"><a href="link" target="_blank">Link</a></code> with no "opens in new window" text.</td>
+                <td>3.2.5 (Change on Request)</td>
+            </tr>
+            <tr>
+                <td>F54</td>
+                <td>ARIA</td>
+                <td>ARIA role misused, breaking assistive tech expectations.</td>
+                <td><code class="hljs javascript"><div role="button">Click</div></code> with no keyboard interaction (e.g., Enter key support).</td>
+                <td>4.1.2 (Name, Role, Value)</td>
+            </tr>
+            <tr>
+                <td>F59</td>
+                <td>ARIA</td>
+                <td>ARIA attribute invalid or unsupported, causing errors in assistive tech.</td>
+                <td><code class="hljs javascript"><div aria-lable="test"></code> (typo instead of <code class="hljs javascript">aria-label</code>).</td>
+                <td>4.1.2 (Name, Role, Value)</td>
+            </tr>
+            <tr>
+                <td>F63</td>
+                <td>Links</td>
+                <td>Adjacent identical links to different destinations, confusing users.</td>
+                <td>Two <code class="hljs javascript"><a href="#">More</a></code> links side-by-side, one to "page1", one to "page2".</td>
+                <td>2.4.4 (Link Purpose in Context)</td>
+            </tr>
+            <tr>
+                <td>F65</td>
+                <td>Images</td>
+                <td>Images with no alt attribute at all, leaving screen readers silent.</td>
+                <td><code class="hljs javascript"><img src="logo.png"></code> with no <code class="hljs javascript">alt=""</code> or <code class="hljs javascript">alt="Company Logo"</code>.</td>
+                <td>1.1.1 (Non-text Content)</td>
+            </tr>
+            <tr>
+                <td>F68</td>
+                <td>Form Controls</td>
+                <td>Form controls lack associated labels, breaking screen reader context.</td>
+                <td><code class="hljs javascript"><input type="text"></code> with no <code class="hljs javascript"><label for="id"></code> or <code class="hljs javascript">aria-label</code>.</td>
+                <td>1.3.1 (Info and Relationships)</td>
+            </tr>
+            <tr>
+                <td>F77</td>
+                <td>ARIA</td>
+                <td>Duplicate IDs in ARIA references, causing assistive tech to misinterpret.</td>
+                <td><code class="hljs javascript"><input id="x" aria-describedby="x"></code> (same ID used twice).</td>
+                <td>4.1.1 (Parsing)</td>
+            </tr>
+            <tr>
+                <td>F78</td>
+                <td>Focus Indicators</td>
+                <td>Focus indicators removed via CSS, leaving keyboard users lost.</td>
+                <td><code class="hljs javascript">input:focus { outline: none; }</code> with no alternative focus style.</td>
+                <td>2.4.7 (Focus Visible)</td>
+            </tr>
+            <tr>
+                <td>F81</td>
+                <td>Form Fields</td>
+                <td>Required fields indicated only by color, not text.</td>
+                <td><code class="hljs javascript"><input style="border: red"></code> with no "Required" text or icon.</td>
+                <td>3.3.2 (Labels or Instructions)</td>
+            </tr>
+            <tr>
+                <td>F84</td>
+                <td>Links</td>
+                <td>Vague link text (e.g., "click here") without context.</td>
+                <td><code class="hljs javascript"><a href="info.html">Click here</a></code> instead of <code class="hljs javascript"><a href="info.html">Learn More</a></code>.</td>
+                <td>2.4.4 (Link Purpose in Context)</td>
+            </tr>
+            <tr>
+                <td>F91</td>
+                <td>Tables</td>
+                <td>Data tables with no headers, breaking structure for screen readers.</td>
+                <td><code class="hljs javascript"><table><tr><td>Name</td><td>Age</td></tr></table></code> with no <code class="hljs javascript"><th></code>.</td>
+                <td>1.3.1 (Info and Relationships)</td>
+            </tr>
+            <tr>
+                <td>F99</td>
+                <td>Keyboard Navigation</td>
+                <td>Keyboard focus not managed after dynamic content changes.</td>
+                <td>JS adds <code class="hljs javascript"><div></code> but focus stays on old button, not new content.</td>
+                <td>2.4.3 (Focus Order)</td>
+            </tr>
+            <tr>
+                <td>F108</td>
+                <td>Text Resize</td>
+                <td>Text doesn’t resize properly at 200% zoom, overlapping or clipping.</td>
+                <td><code class="hljs javascript"><div style="font-size: 10px; width: 50px">Long text</div></code> clips at 200% zoom.</td>
+                <td>1.4.4 (Resize Text)</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>Note:</strong> This table includes a sample of WCAG 2.2 failures with their corresponding Success Criteria. For the full list, refer to the <a href="https://www.w3.org/WAI/WCAG22/Techniques/#failures">W3C WCAG 2.2 Techniques</a>.</p>
+
+    <script type="text/javascript">
+    // Function to escape HTML
+    function escapeHTML(html) {
+      return html.replace(/&/g, '&amp;')
+                 .replace(/</g, '&lt;')
+                 .replace(/>/g, '&gt;')
+                 .replace(/"/g, '&quot;')
+                 .replace(/'/g, '&#039;');
+    }
+
+    // Function to escape content inside <code> tags
+    function escapeCodeTags() {
+      // Get all <code> elements
+      const codeElements = document.querySelectorAll('code');
+
+      // Loop through each <code> element
+      codeElements.forEach(codeElement => {
+        // Escape the inner HTML
+        const escapedContent = escapeHTML(codeElement.innerHTML);
+        // Replace the inner HTML with the escaped version
+        codeElement.innerHTML = escapedContent;
+      });
+    }
+
+    // Call the function to escape <code> tags
+    escapeCodeTags();        
+    </script>
+    <!-- <script src="lib/highlight/highlight.js"></script> -->
+</body>
+</html>
